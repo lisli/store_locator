@@ -1,4 +1,4 @@
-<h1>Listing stores</h1>
+<h1>Girls Can Tell Store Locator</h1>
 
 <table>
   <thead>
@@ -35,3 +35,10 @@
 <br>
 
 <%= link_to 'New Store', new_store_path %>
+
+<h4>Upload CSV</h4>
+<p>Uploading a new CSV will delete all current stores listed and recreate them from the CSV so that duplicate entries are avoided.</p>
+<%= form_tag import_stores_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import", confirm: "Are you sure you want to replace all current stores with the new CSV?" %>
+<% end %>
