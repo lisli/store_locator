@@ -3,7 +3,7 @@ class Store < ActiveRecord::Base
   def self.search(search)
     if search
   	  where('name ILIKE :q OR city ILIKE :q OR state ILIKE :q OR state_abbr ILIKE :q OR zip ILIKE :q OR country ILIKE :q ', :q => "%#{search}%").
-      order('state', 'name')
+      order('city', 'name')
   	else
   	  all
   	end
