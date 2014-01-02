@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20131216182441) do
 
   create_table "stores", force: true do |t|
     t.string   "name"
+    t.string   "phone_number"
     t.string   "city"
     t.string   "state"
     t.string   "state_abbr"

@@ -66,7 +66,7 @@ class StoresController < ApplicationController
     Store.import(params[:file])
     redirect_to root_url, notice: "Congratulations! Those locations have been imported!"
   rescue ActiveRecord::UnknownAttributeError
-    redirect_to root_url, notice: "Oops! Something went wrong when importing that CSV. Please make sure its header names are as follows: name, city, state, state_abbr, zip, country (all lowercase!)."
+    redirect_to root_url, notice: "Oops! Something went wrong when importing that CSV. Please make sure its header names are as follows: name, phone_number, city, state, state_abbr, zip, country (all lowercase!)."
   end
 
 
