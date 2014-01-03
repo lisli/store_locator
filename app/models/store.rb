@@ -15,4 +15,13 @@ class Store < ActiveRecord::Base
       Store.create! row.to_hash
     end
   end
+
+  def phone_number
+    num = read_attribute(:phone_number)
+    "#{num[0..2]}-#{num[3..5]}-#{num[6..9]}" if num
+  end
+
+  def phone_number=(phone_number)
+    write_attribute(:phone_number, phone_number.gsub(/[^0-9]/, ''))
+  end
 end
