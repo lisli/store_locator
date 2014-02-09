@@ -22,6 +22,7 @@ class Store < ActiveRecord::Base
   end
 
   def phone_number=(phone_number)
+    return unless phone_number
     write_attribute(:phone_number, phone_number.gsub(/[^0-9]/, ''))
   end
 end
