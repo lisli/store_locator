@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'newrelic_rpm'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
